@@ -1,0 +1,21 @@
+{
+		"Test1": [{
+			"url": "https://localhost:8080/",
+			"username": "749932",
+			"pwd": "123456",
+			"ext": "749932"
+		}],
+		"Test2": [{
+			"url": "https://localhost:8080/",
+			"username_ch1": "749932",
+			"pwd_ch1": "123456",
+			"ext_ch1": "749932",
+			"username_ch2": "749934",
+			"pwd_ch2": "123456",
+			"ext_ch2": "749934",
+			"username_ff": "749937",
+			"pwd_ff": "123456",
+			"ext_ff": "749937"
+		}]
+
+}
