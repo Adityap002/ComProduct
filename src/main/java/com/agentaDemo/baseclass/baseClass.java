@@ -3,18 +3,21 @@ package com.agentaDemo.baseclass;
 import java.io.File;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.commons.io.FileUtils;
+import javax.imageio.ImageIO;
+
 import org.apache.log4j.Logger;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.CapabilityType;
-import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
 import com.agentaDemo.Util.DriverInstantiate;
 import com.agentaDemo.Util.ExcelUtility;
@@ -25,10 +28,20 @@ public class baseClass {
 	public static WebDriver driver;
 	private static Logger logger = Logger.getLogger(baseClass.class.getName());
 	
+	public baseClass(WebDriver driver) {
+		this.driver = driver;
+	}
+	public baseClass() {
+		
+	}
 	@BeforeClass
 	public static void setObject() {
 		try {
-			ExcelUtility.setExcelFile(excelSetUp.excelLocation + excelSetUp.fileName, "AgentaTest");
+
+			ExcelUtility.setExcelFile(excelSetUp.excelLocation
+					+ excelSetUp.fileName, "AgentaTest");
+			logger.debug("Excel File name is " + excelSetUp.excelLocation
+					+ excelSetUp.fileName);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -42,15 +55,16 @@ public class baseClass {
 		choptions.addArguments("start-maximized");
 		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		driver = new ChromeDriver(choptions);
-		System.out.println("Chrome driver instantiate");
+		logger.debug("chrome driver got initialized");
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		
-		
+		logger.debug("set implicit wait");
+
 	}
 
-	public static void openApp(WebDriver driver, String application) {
+	public static void openApp(String application) {
 		if (driver != null) {
 			driver.get(application);
+			logger.debug("open : " + application);
 		}
 	}
 
@@ -59,52 +73,47 @@ public class baseClass {
 		logger.debug("Closeing the browser");
 		driver = null;
 	}
-	
-	@AfterClass
-	public static void quitBrowser(){
-		
-		if(driver != null){
+
+	@AfterMethod
+	public static void quitBrowser() {
+
+		if (driver != null) {
 			driver.quit();
-			System.out.println("chrome driver quit");
+			logger.debug("chrome driver quit");
 		}
-		if(DriverInstantiate.ffdriver != null){
+		if (DriverInstantiate.ffdriver != null) {
 			DriverInstantiate.ffdriver.quit();
-			System.out.println("firefox driver quit");
+			logger.debug("firefox driver quit");
 		}
-		if(DriverInstantiate.chromedriver != null){
+		if (DriverInstantiate.chromedriver != null) {
 			DriverInstantiate.chromedriver.quit();
-			System.out.println("Chrome2 driver quit");
+			logger.debug("Chrome2 driver quit");
 		}
-		
+
 		driver = null;
 		DriverInstantiate.ffdriver = null;
 		DriverInstantiate.chromedriver = null;
-		
+
 	}
-	
+
 	public static void switchtoIFrame(WebElement arg) {
 		driver.switchTo().frame(arg);
 		logger.debug("switching window to Iframe");
 	}
 
-	public static void takeSnapShot(WebDriver driver, String fileWithPath)
+	public static void takeSnapShot(String fileWithPath)
 			throws Exception {
 
-		// Convert web driver object to TakeScreenshot
+		// using TakeScreenshot can take snapshot from
+		// FileUtils.copyFile(((TakesScreenshot)
+		// driver).getScreenshotAs(OutputType.FILE), new File(fileWithPath));
 
-		TakesScreenshot scrShot = ((TakesScreenshot) driver);
+		Screenshot screenshot = new AShot().shootingStrategy(
+				ShootingStrategies.viewportPasting(1000))
+				.takeScreenshot(driver);
 
-		// Call getScreenshotAs method to create image file
-
-		File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
-
-		// Move image file to new destination
-
-		File DestFile = new File(fileWithPath);
-
-		// Copy file at destination
-
-		FileUtils.copyFile(SrcFile, DestFile);
+		// To save the screenshot in desired location
+		ImageIO.write(screenshot.getImage(), "PNG", new File(fileWithPath));
 
 	}
 }

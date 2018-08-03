@@ -1,6 +1,8 @@
 package com.agentaDemo.config;
 
+
 public class Configuration {
+	
 	public static class url {
 		// create inner class for url
 		public static String app_url = "https://localhost:8080/";
@@ -15,6 +17,12 @@ public class Configuration {
 		// create browser variable
 		public static String excelLocation = "C:\\Users\\aditya.p\\Desktop\\Automate2\\agentaSnapDemo\\src\\main\\java\\com\\agentaDemo\\resource\\";
 		public static String fileName = "ExcelData.xlsx";
+	}
+	
+	public static class extentReportSetUp {
+		// create browser variable
+		public static String extentReportLocation = "C:\\Users\\aditya.p\\Desktop\\Automate2\\agentaSnapDemo\\src\\main\\java\\com\\agentaDemo\\resource\\";
+		public static String reportName = "report.html";
 	}
 
 	public static class jsonSetUp {

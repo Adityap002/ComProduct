@@ -1,5 +1,6 @@
 package com.agentaDemo.pom;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,7 +9,16 @@ import org.openqa.selenium.support.How;
 
 public class LoginPage {
 
-	public static By sighOutLoc = By.xpath("//span[contains(text(),'Sign Out')]");
+	private static Logger logger = Logger.getLogger(LoginPage.class.getName());
+
+	public WebDriver driver = null;
+
+	public LoginPage(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public static By sighOutLoc = By
+			.xpath("//span[contains(text(),'Sign Out')]");
 
 	@FindBy(how = How.ID, using = "textinput-username")
 	private WebElement id;
@@ -22,19 +32,23 @@ public class LoginPage {
 	@FindBy(how = How.XPATH, using = "//agenta[@id='login-button']/a")
 	private WebElement signIn;
 
-	public void enterId(WebDriver driver, String userID) {
+	public void enterId(String userID) {
 		id.sendKeys(userID);
+		logger.debug("enter user id : " + userID);
 	}
 
-	public void enterPassword(WebDriver driver,String password) {
-			pwd.sendKeys(password);
+	public void enterPassword(String password) {
+		pwd.sendKeys(password);
+		logger.debug("enter pwd : " + password);
 	}
 
-	public void enterExtension(WebDriver driver, String extension) {
+	public void enterExtension(String extension) {
 		ext.sendKeys(extension);
+		logger.debug("enter Extension : " + extension);
 	}
 
 	public void clickSubmit() {
 		signIn.click();
+		logger.debug("click SignIn button");
 	}
 }

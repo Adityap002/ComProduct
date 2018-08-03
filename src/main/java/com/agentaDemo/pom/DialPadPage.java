@@ -1,10 +1,15 @@
 package com.agentaDemo.pom;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class DialPadPage {
+	
+	private static Logger logger = Logger.getLogger(DialPadPage.class.getName());
+	
+	public WebDriver driver = null;
 
 	@FindBy(xpath = "//table[@id='keypad-content']//span[contains(text(),'1')]")
 	private WebElement one;
@@ -48,61 +53,80 @@ public class DialPadPage {
 	
 	@FindBy(id="dialpad-cancel-button")
 	private WebElement cancelBtn; 
+	
+	public DialPadPage(WebDriver driver) {
+		super();
+		this.driver = driver;
+	}
 
-	public void click_1(WebDriver driver) {
+	public void click_1() {
 		one.click();
+		logger.debug("Clicked on 1");
 	}
 
-	public void click_2(WebDriver driver) {
+	public void click_2() {
 		two.click();
+		logger.debug("Clicked on 2");
 	}
 	
-	public void click_3(WebDriver driver) {
+	public void click_3() {
 		three.click();
+		logger.debug("Clicked on 3");
 	}
 	
-	public void click_4(WebDriver driver) {
+	public void click_4() {
 		four.click();
+		logger.debug("Clicked on 4");
 	}
 
-	public void click_5(WebDriver driver) {
+	public void click_5() {
 		five.click();
+		logger.debug("Clicked on 5");
 	}
 	
-	public void click_6(WebDriver driver) {
+	public void click_6() {
 		six.click();
+		logger.debug("Clicked on 6");
 	}
 	
-	public void click_7(WebDriver driver) {
+	public void click_7() {
 		seven.click();
+		logger.debug("Clicked on 7");
 	}
 
-	public void click_8(WebDriver driver) {
+	public void click_8() {
 		eight.click();
+		logger.debug("Clicked on 8");
 	}
 	
-	public void click_9(WebDriver driver) {
+	public void click_9() {
 		nine.click();
+		logger.debug("Clicked on 9");
 	}
 	
-	public void phonebook_Click(WebDriver driver) {
+	public void phonebook_Click() {
 		phoneBookTab.click();
+		logger.debug("Clicked on phone book");
 	}
 	
-	public void keypad_Click(WebDriver driver) {
+	public void keypad_Click() {
 		keyPadTab.click();
+		logger.debug("Clicked on keypad");
 	}
 	
-	public void nubmer_Box(WebDriver driver, String number) {
+	public void nubmer_Box( String number) {
 		numberBox.sendKeys(number);
+		logger.debug("Clicked on numberBox");
 	}
 	
-	public void callBtn_Click(WebDriver driver) {
+	public void callBtn_Click() {
 		callBtn.click();
+		logger.debug("Clicked on callBtn");
 	}
 	
-	public void cancelBtn_Click(WebDriver driver) {
+	public void cancelBtn_Click() {
 		cancelBtn.click();
+		logger.debug("Clicked on cancelBtn");
 	}
 
 }

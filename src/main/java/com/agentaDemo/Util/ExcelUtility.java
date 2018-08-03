@@ -2,6 +2,7 @@ package com.agentaDemo.Util;
 
 import java.io.FileInputStream;
 
+import org.apache.log4j.Logger;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
@@ -13,6 +14,8 @@ public class ExcelUtility {
 
 	private static XSSFWorkbook ExcelWBook;
 	private static XSSFSheet ExcelWSheet;
+	private static Logger logger = Logger.getLogger(ExcelUtility.class
+			.getName());
 
 	/*
 	 * Set the File path, open Excel file
@@ -26,6 +29,7 @@ public class ExcelUtility {
 			// Access the excel data sheet
 			ExcelWBook = new XSSFWorkbook(ExcelFile);
 			ExcelWSheet = ExcelWBook.getSheet(sheetName);
+			logger.debug("Workbook : " + path + "Sheet name" + sheetName);
 		} catch (Exception e) {
 			throw (e);
 		}
@@ -38,6 +42,7 @@ public class ExcelUtility {
 			// Handle numbers and strings
 			DataFormatter formatter = new DataFormatter();
 			XSSFCell[] boundaryCells = findCells(tableName);
+			logger.debug("Test Name is "+tableName);
 			XSSFCell startCell = boundaryCells[0];
 			
 			XSSFCell endCell = boundaryCells[1];
@@ -46,6 +51,8 @@ public class ExcelUtility {
 			int endRow = endCell.getRowIndex() - 1;
 			int startCol = startCell.getColumnIndex() + 1;
 			int endCol = endCell.getColumnIndex() - 1;
+			
+			logger.debug("Start row " + startRow + "End Row " + endRow + "Start Col " + startCol + "End col " + endCol);
 
 			testData = new String[endRow - startRow + 1][endCol - startCol + 1];
 
@@ -73,9 +80,11 @@ public class ExcelUtility {
 				if (tableName.equals(formatter.formatCellValue(cell))) {
 					if (pos.equalsIgnoreCase("begin")) {
 						cells[0] = (XSSFCell) cell;
+						logger.debug("text begin");
 						pos = "end";
 					} else {
 						cells[1] = (XSSFCell) cell;
+						logger.debug("text end");
 					}
 				}
 			}

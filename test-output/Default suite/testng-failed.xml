@@ -6,16 +6,4 @@
       <class name="com.agentaDemo.AgentaTestCase.NotReadyAgenttoAgentCall"/>
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="com.agentaDemo.AgentaTestCase.NotReadyAgenttoAgentCall">
-        <methods>
-          <include name="setObject"/>
-          <include name="setDriverPath"/>
-          <include name="quitBrowser"/>
-          <include name="agentToAgentCall" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- com.agentaDemo.AgentaTestCase.NotReadyAgenttoAgentCall -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
