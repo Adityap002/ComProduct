@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DemowithPopup">
+	<test thread-count="5" name="UserLogin">
+		<classes>
+			<class name="com.agentaDemo.AgentaTestCase.NotReady_Conference_Popup" />
+			<class name="com.agentaDemo.AgentaTestCase.NotReady_Wrapupreasoncode_PopUp" />
+		</classes>
+	</test>  <!-- Test -->
+</suite> <!-- Suite -->

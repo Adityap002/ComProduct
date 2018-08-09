@@ -11,7 +11,7 @@ public class OutboundCallAnsPage {
 	private static Logger logger = Logger.getLogger(OutboundCallAnsPage.class
 			.getName());
 	
-	public WebDriver driver = null;
+	protected WebDriver driver = null;
 
 	public OutboundCallAnsPage(WebDriver driver) {
 		this.driver = driver;
@@ -114,8 +114,12 @@ public class OutboundCallAnsPage {
 		logger.debug("Click on Conference button");
 	}
 	
-	@FindBy(id = "dropdown-wrap")
+	@FindBy(id = "wrapup-label")
 	private WebElement wrapUpDD;
+	
+	public String wrapUpDD_Text(){
+		return wrapUpDD.getText();
+	}
 
 	public void wrapUpDD_Click() {
 		wrapUpDD.click();
@@ -127,13 +131,14 @@ public class OutboundCallAnsPage {
 
 	public void applyBTN_Click() {
 		applyBTN.click();
-		logger.debug("Click on wrap Up dropdown");
+		logger.debug("Click on apply button");
 	}
 	
-	public void wrapUpStatus_Click(String wrapUpStatusValue) {
+	public void wrapUpReason_Click(String wrapUpStatusValue) {
+		wrapUpDD_Click();
 		WebElement wrapUpStatus = driver.findElement(By.xpath("//a[contains(text(),'"+wrapUpStatusValue+"')]"));
 		wrapUpStatus.click();
-		logger.debug("Click on wrap Up dropdown");
+		logger.debug("Select wrap up reason code");
 	}
 	
 }

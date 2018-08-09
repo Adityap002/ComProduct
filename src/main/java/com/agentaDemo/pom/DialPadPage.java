@@ -6,10 +6,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class DialPadPage {
-	
-	private static Logger logger = Logger.getLogger(DialPadPage.class.getName());
-	
-	public WebDriver driver = null;
+
+	private static Logger logger = Logger
+			.getLogger(DialPadPage.class.getName());
+
+	protected static WebDriver driver = null;
 
 	@FindBy(xpath = "//table[@id='keypad-content']//span[contains(text(),'1')]")
 	private WebElement one;
@@ -38,25 +39,30 @@ public class DialPadPage {
 	@FindBy(xpath = "//table[@id='keypad-content']//span[contains(text(),'9')]")
 	private WebElement nine;
 
-	
-	@FindBy(id="goPhoneTab")
+	@FindBy(xpath = "//table[@id='keypad-content']//span[contains(text(),'0')]")
+	private WebElement zero;
+
+	@FindBy(xpath = "//table[@id='keypad-content']//span[contains(text(),'*')]")
+	private WebElement star;
+
+	@FindBy(id = "goPhoneTab")
 	private WebElement phoneBookTab;
-	
-	@FindBy(id="goKeypadTab")
+
+	@FindBy(id = "goKeypadTab")
 	private WebElement keyPadTab;
-	
-	@FindBy(id="dialer-preview")
+
+	@FindBy(id = "dialer-preview")
 	private WebElement numberBox;
-	
-	@FindBy(id="dialpad-call-button")
-	private WebElement callBtn; 
-	
-	@FindBy(id="dialpad-cancel-button")
-	private WebElement cancelBtn; 
-	
+
+	@FindBy(id = "dialpad-call-button")
+	private WebElement callBtn;
+
+	@FindBy(id = "dialpad-cancel-button")
+	private WebElement cancelBtn;
+
 	public DialPadPage(WebDriver driver) {
 		super();
-		this.driver = driver;
+		DialPadPage.driver = driver;
 	}
 
 	public void click_1() {
@@ -68,12 +74,12 @@ public class DialPadPage {
 		two.click();
 		logger.debug("Clicked on 2");
 	}
-	
+
 	public void click_3() {
 		three.click();
 		logger.debug("Clicked on 3");
 	}
-	
+
 	public void click_4() {
 		four.click();
 		logger.debug("Clicked on 4");
@@ -83,12 +89,12 @@ public class DialPadPage {
 		five.click();
 		logger.debug("Clicked on 5");
 	}
-	
+
 	public void click_6() {
 		six.click();
 		logger.debug("Clicked on 6");
 	}
-	
+
 	public void click_7() {
 		seven.click();
 		logger.debug("Clicked on 7");
@@ -98,35 +104,85 @@ public class DialPadPage {
 		eight.click();
 		logger.debug("Clicked on 8");
 	}
-	
+
 	public void click_9() {
 		nine.click();
 		logger.debug("Clicked on 9");
 	}
-	
+
+	public void click_0() {
+		zero.click();
+		logger.debug("Clicked on 0");
+	}
+
+	public void click_star() {
+		star.click();
+		logger.debug("Clicked on *");
+	}
+
 	public void phonebook_Click() {
 		phoneBookTab.click();
 		logger.debug("Clicked on phone book");
 	}
-	
+
 	public void keypad_Click() {
 		keyPadTab.click();
 		logger.debug("Clicked on keypad");
 	}
-	
-	public void nubmer_Box( String number) {
+
+	public void nubmer_Box(String number) {
 		numberBox.sendKeys(number);
 		logger.debug("Clicked on numberBox");
 	}
-	
+
 	public void callBtn_Click() {
 		callBtn.click();
 		logger.debug("Clicked on callBtn");
 	}
-	
+
 	public void cancelBtn_Click() {
 		cancelBtn.click();
 		logger.debug("Clicked on cancelBtn");
 	}
 
+	public void dialNumber(String dialnumber) {
+
+		for (int i = 0; i < dialnumber.length(); i++) {
+			switch (dialnumber.charAt(i)) {
+			case '1':
+				click_1();
+				break;
+			case '2':
+				click_2();
+				break;
+			case '3':
+				click_3();
+				break;
+			case '4':
+				click_4();
+				break;
+			case '5':
+				click_5();
+				break;
+			case '6':
+				click_6();
+				break;
+			case '7':
+				click_7();
+				break;
+			case '8':
+				click_8();
+				break;
+			case '9':
+				click_9();
+				break;
+			case '0':
+				click_0();
+				break;
+			default:
+				logger.debug("Default swith");
+				break;
+			}
+		}
+	}
 }

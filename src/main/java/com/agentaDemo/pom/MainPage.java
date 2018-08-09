@@ -1,6 +1,8 @@
 package com.agentaDemo.pom;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,7 +11,7 @@ public class MainPage {
 	
 	private static Logger logger = Logger.getLogger(MainPage.class.getName());
 	
-	public WebDriver driver = null;
+	protected WebDriver driver = null;
 
 	public MainPage(WebDriver driver) {
 		this.driver = driver;
@@ -44,8 +46,22 @@ public class MainPage {
 		logger.debug("Click on keyboard on Main page ");
 	}
 	
-	public void signOutClick() {
+	public void signOutClick(String signoutreason) throws InterruptedException {
 		signout.click();
+		Thread.sleep(2000);
+		
+		//Alert with 
+		JavascriptExecutor javascript = (JavascriptExecutor) driver;
+		javascript.executeScript("alert('SignOut reason is Meeting');");
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		
+		//Created element for 
+		WebElement element = driver.findElement(By.xpath("//agenta[@id='dropdown-logout']//a[contains(text(),'"+signoutreason+"')]"));
+		
+		//
+		javascript.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", element);
+		element.click();
 		logger.debug("Click on sign out on Main page ");
 	}
 	

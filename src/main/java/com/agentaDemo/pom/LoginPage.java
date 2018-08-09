@@ -11,7 +11,7 @@ public class LoginPage {
 
 	private static Logger logger = Logger.getLogger(LoginPage.class.getName());
 
-	public WebDriver driver = null;
+	protected WebDriver driver = null;
 
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
@@ -50,5 +50,13 @@ public class LoginPage {
 	public void clickSubmit() {
 		signIn.click();
 		logger.debug("click SignIn button");
+	}
+	
+	public void loginWithValidCredentials(String userID, String password, String extension) {
+		id.sendKeys(userID);
+		pwd.sendKeys(password);
+		ext.sendKeys(extension);
+		signIn.click();
+		logger.debug("Login with valid credentials");
 	}
 }

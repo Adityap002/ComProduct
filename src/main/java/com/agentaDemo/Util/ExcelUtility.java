@@ -19,9 +19,11 @@ public class ExcelUtility {
 
 	/*
 	 * Set the File path, open Excel file
+	 * 
 	 * @params - Excel Path and Sheet Name
 	 */
-	public static void setExcelFile(String path, String sheetName) throws Exception {
+	public static void setExcelFile(String path, String sheetName)
+			throws Exception {
 		try {
 			// Open the Excel file
 			FileInputStream ExcelFile = new FileInputStream(path);
@@ -42,25 +44,28 @@ public class ExcelUtility {
 			// Handle numbers and strings
 			DataFormatter formatter = new DataFormatter();
 			XSSFCell[] boundaryCells = findCells(tableName);
-			logger.debug("Test Name is "+tableName);
+			logger.debug("Test Name is " + tableName);
 			XSSFCell startCell = boundaryCells[0];
-			
+
 			XSSFCell endCell = boundaryCells[1];
-			
+
 			int startRow = startCell.getRowIndex() + 1;
 			int endRow = endCell.getRowIndex() - 1;
 			int startCol = startCell.getColumnIndex() + 1;
 			int endCol = endCell.getColumnIndex() - 1;
-			
-			logger.debug("Start row " + startRow + "End Row " + endRow + "Start Col " + startCol + "End col " + endCol);
+
+			logger.debug("Start row " + startRow + "End Row " + endRow
+					+ "Start Col " + startCol + "End col " + endCol);
 
 			testData = new String[endRow - startRow + 1][endCol - startCol + 1];
 
-			for (int i=startRow; i<endRow+1; i++) {
-				for (int j=startCol; j<endCol+1; j++) {
-					// testData[i-startRow][j-startCol] = ExcelWSheet.getRow(i).getCell(j).getStringCellValue();
+			for (int i = startRow; i < endRow + 1; i++) {
+				for (int j = startCol; j < endCol + 1; j++) {
+					// testData[i-startRow][j-startCol] =
+					// ExcelWSheet.getRow(i).getCell(j).getStringCellValue();
 					Cell cell = ExcelWSheet.getRow(i).getCell(j);
-					testData[i - startRow][j - startCol] = formatter.formatCellValue(cell);
+					testData[i - startRow][j - startCol] = formatter
+							.formatCellValue(cell);
 				}
 			}
 		} catch (Exception e) {

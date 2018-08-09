@@ -3,9 +3,11 @@ package com.agentaDemo.baseclass;
 import java.io.File;
 import java.util.concurrent.TimeUnit;
 
-import javax.imageio.ImageIO;
-
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,25 +17,14 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
-import ru.yandex.qatools.ashot.AShot;
-import ru.yandex.qatools.ashot.Screenshot;
-import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
-
 import com.agentaDemo.Util.DriverInstantiate;
 import com.agentaDemo.Util.ExcelUtility;
 import com.agentaDemo.config.Configuration.excelSetUp;
 
 public class baseClass {
-
-	public static WebDriver driver;
 	private static Logger logger = Logger.getLogger(baseClass.class.getName());
-	
-	public baseClass(WebDriver driver) {
-		this.driver = driver;
-	}
-	public baseClass() {
-		
-	}
+	public static WebDriver driver;
+
 	@BeforeClass
 	public static void setObject() {
 		try {
@@ -52,16 +43,20 @@ public class baseClass {
 	public static void setDriverPath() {
 		ChromeOptions choptions = new ChromeOptions();
 		choptions.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-		choptions.addArguments("start-maximized");
+		//choptions.addArguments("start-maximized");
 		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		driver = new ChromeDriver(choptions);
+		Dimension d = new Dimension(0,600);
+		driver.manage().window().setSize(d);
 		logger.debug("chrome driver got initialized");
+		
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		logger.debug("set implicit wait");
+		logger.debug(driver);
 
 	}
 
-	public static void openApp(String application) {
+	public static void openApp(WebDriver driver, String application) {
 		if (driver != null) {
 			driver.get(application);
 			logger.debug("open : " + application);
@@ -101,19 +96,19 @@ public class baseClass {
 		logger.debug("switching window to Iframe");
 	}
 
-	public static void takeSnapShot(String fileWithPath)
+	public static void takeSnapShot(WebDriver driver, String fileWithPath)
 			throws Exception {
 
 		// using TakeScreenshot can take snapshot from
-		// FileUtils.copyFile(((TakesScreenshot)
-		// driver).getScreenshotAs(OutputType.FILE), new File(fileWithPath));
+		FileUtils.copyFile(((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE), new File(fileWithPath));
+		logger.debug("take screenshot for failed result");
 
-		Screenshot screenshot = new AShot().shootingStrategy(
+		/*Screenshot screenshot = new AShot().shootingStrategy(
 				ShootingStrategies.viewportPasting(1000))
 				.takeScreenshot(driver);
 
 		// To save the screenshot in desired location
-		ImageIO.write(screenshot.getImage(), "PNG", new File(fileWithPath));
+		ImageIO.write(screenshot.getImage(), "PNG", new File(fileWithPath));*/
 
 	}
 }

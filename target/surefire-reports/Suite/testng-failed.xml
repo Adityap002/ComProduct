@@ -3,19 +3,9 @@
 <suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]">
   <test thread-count="5" name="UserLogin">
     <classes>
-      <class name="com.agentaDemo.AgentaTestCase.NotReadyAgenttoAgentCall"/>
+      <class name="com.agentaDemo.AgentaTestCase.NotReady_Conference"/>
+      <class name="com.agentaDemo.AgentaTestCase.LoginAndLogOutValidation"/>
+      <class name="com.agentaDemo.AgentaTestCase.NotReady_Conference"/>
     </classes>
   </test> <!-- UserLogin -->
-  <test name="UserLogin(failed)">
-    <classes>
-      <class name="com.agentaDemo.AgentaTestCase.NotReadyAgenttoAgentCall">
-        <methods>
-          <include name="setObject"/>
-          <include name="setDriverPath"/>
-          <include name="quitBrowser"/>
-          <include name="agentToAgentCall1" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- com.agentaDemo.AgentaTestCase.NotReadyAgenttoAgentCall -->
-    </classes>
-  </test> <!-- UserLogin(failed) -->
 </suite> <!-- Failed suite [Suite] -->

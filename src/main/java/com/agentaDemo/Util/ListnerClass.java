@@ -3,7 +3,6 @@ package com.agentaDemo.Util;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -15,9 +14,9 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class ListnerClass extends baseClass implements ITestListener {
 
-	protected static WebDriver driver;
-	protected static ExtentReports reports;
-	protected static ExtentTest test;
+	
+	public static ExtentReports reports;
+	public static ExtentTest test;
 
 	/**
 	 * @see com.beust.testng.ITestListener#onTestFailure(com.beust.testng.ITestResult)
@@ -28,7 +27,7 @@ public class ListnerClass extends baseClass implements ITestListener {
 				+ result.getMethod().getMethodName() + "_" + new SimpleDateFormat(
 						"yyyy-MM-dd hh-mm-ss-ms").format(new Date()) + ".png";
 		try {
-			takeSnapShot(fileName);
+			takeSnapShot(driver, fileName);
 			String file = test.addScreenCapture(fileName);
 			test.log(LogStatus.FAIL, result.getMethod().getMethodName()
 					+ "test is failed", file);
@@ -57,7 +56,6 @@ public class ListnerClass extends baseClass implements ITestListener {
 	public void onTestSkipped(ITestResult result) {
 		test.log(LogStatus.SKIP, result.getMethod().getMethodName()
 				+ "test is skipped");
-
 	}
 
 	@Override
