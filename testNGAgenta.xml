@@ -3,8 +3,8 @@
 <suite name="DemowithoutPopup">
 	<test thread-count="5" name="UserLogin">
 		<classes>
-			<class name="com.agentaDemo.AgentaTestCase.NotReady_Wrapupreasoncode" />
-			<class name="com.agentaDemo.AgentaTestCase.NotReady_Conference" />
+			<class name="com.automationsnap.TestCase.NotReady_Wrapupreasoncode" />
+			<!--<class name="com.automationsnap.TestCase.NotReady_Conference" />-->
 		</classes>
 	</test>  <!-- Test -->
 </suite> <!-- Suite -->

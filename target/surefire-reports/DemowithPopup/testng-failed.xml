@@ -3,8 +3,28 @@
 <suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [DemowithPopup]">
   <test thread-count="5" name="UserLogin">
     <classes>
-      <class name="com.agentaDemo.AgentaTestCase.NotReady_Conference_Popup"/>
-      <class name="com.agentaDemo.AgentaTestCase.NotReady_Wrapupreasoncode_PopUp"/>
+      <class name="com.automationsnap.TestCase.NotReady_Conference_Popup"/>
+      <class name="com.automationsnap.TestCase.NotReady_Wrapupreasoncode_PopUp"/>
     </classes>
   </test> <!-- UserLogin -->
+  <test name="UserLogin(failed)">
+    <classes>
+      <class name="com.automationsnap.TestCase.NotReady_Conference_Popup">
+        <methods>
+          <include name="to_validate_Conference_for_three_User_in_Not_Ready_with_PopUp" invocation-numbers="0"/>
+          <include name="setObject"/>
+          <include name="setDriverPath"/>
+          <include name="quitBrowser"/>
+        </methods>
+      </class> <!-- com.automationsnap.TestCase.NotReady_Conference_Popup -->
+      <class name="com.automationsnap.TestCase.NotReady_Wrapupreasoncode_PopUp">
+        <methods>
+          <include name="to_validate_Wrapup_ReasonCode_Not_Ready_with_PopUp" invocation-numbers="0"/>
+          <include name="setObject"/>
+          <include name="setDriverPath"/>
+          <include name="quitBrowser"/>
+        </methods>
+      </class> <!-- com.automationsnap.TestCase.NotReady_Wrapupreasoncode_PopUp -->
+    </classes>
+  </test> <!-- UserLogin(failed) -->
 </suite> <!-- Failed suite [DemowithPopup] -->

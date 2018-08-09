@@ -1,96 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="2" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="DemowithPopup" duration-ms="412818" started-at="2018-08-08T15:24:15Z" finished-at="2018-08-08T15:31:08Z">
+  <suite name="DemowithPopup" duration-ms="83047" started-at="2018-08-09T13:39:27Z" finished-at="2018-08-09T13:40:50Z">
     <groups>
     </groups>
-    <test name="UserLogin" duration-ms="412818" started-at="2018-08-08T15:24:15Z" finished-at="2018-08-08T15:31:08Z">
-      <class name="com.agentaDemo.AgentaTestCase.NotReady_Wrapupreasoncode_PopUp">
-        <test-method status="PASS" signature="setObject()[pri:0, instance:com.agentaDemo.AgentaTestCase.NotReady_Wrapupreasoncode_PopUp@704d6e83]" name="setObject" is-config="true" duration-ms="260" started-at="2018-08-08T20:58:30Z" finished-at="2018-08-08T20:58:31Z">
+    <test name="UserLogin" duration-ms="83047" started-at="2018-08-09T13:39:27Z" finished-at="2018-08-09T13:40:50Z">
+      <class name="com.automationsnap.TestCase.NotReady_Conference_Popup">
+        <test-method status="PASS" signature="setObject()[pri:0, instance:com.automationsnap.TestCase.NotReady_Conference_Popup@c730b35]" name="setObject" is-config="true" duration-ms="2796" started-at="2018-08-09T19:09:28Z" finished-at="2018-08-09T19:09:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setObject -->
-        <test-method status="PASS" signature="setDriverPath()[pri:0, instance:com.agentaDemo.AgentaTestCase.NotReady_Wrapupreasoncode_PopUp@704d6e83]" name="setDriverPath" is-config="true" duration-ms="4377" started-at="2018-08-08T20:58:31Z" finished-at="2018-08-08T20:58:35Z">
+        <test-method status="PASS" signature="setDriverPath()[pri:0, instance:com.automationsnap.TestCase.NotReady_Conference_Popup@c730b35]" name="setDriverPath" is-config="true" duration-ms="7613" started-at="2018-08-09T19:09:31Z" finished-at="2018-08-09T19:09:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setDriverPath -->
-        <test-method status="PASS" signature="to_validate_Wrapup_ReasonCode_Not_Ready_with_PopUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.agentaDemo.AgentaTestCase.NotReady_Wrapupreasoncode_PopUp@704d6e83]" name="to_validate_Wrapup_ReasonCode_Not_Ready_with_PopUp" duration-ms="147302" started-at="2018-08-08T20:58:35Z" data-provider="Wrapupreasoncode" finished-at="2018-08-08T21:01:02Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://localhost:8080/]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[749932]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[123456]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[749932]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[749933]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[123456]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[749933]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[749933]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[sales]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[Meeting]]>
-              </value>
-            </param>
-            <param index="10">
-              <value>
-                <![CDATA[Meeting]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- to_validate_Wrapup_ReasonCode_Not_Ready_with_PopUp -->
-        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:com.agentaDemo.AgentaTestCase.NotReady_Wrapupreasoncode_PopUp@704d6e83]" name="quitBrowser" is-config="true" duration-ms="5239" started-at="2018-08-08T21:01:02Z" finished-at="2018-08-08T21:01:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitBrowser -->
-      </class> <!-- com.agentaDemo.AgentaTestCase.NotReady_Wrapupreasoncode_PopUp -->
-      <class name="com.agentaDemo.AgentaTestCase.NotReady_Conference_Popup">
-        <test-method status="PASS" signature="setObject()[pri:0, instance:com.agentaDemo.AgentaTestCase.NotReady_Conference_Popup@1786f9d5]" name="setObject" is-config="true" duration-ms="1433" started-at="2018-08-08T20:54:15Z" finished-at="2018-08-08T20:54:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setObject -->
-        <test-method status="PASS" signature="setDriverPath()[pri:0, instance:com.agentaDemo.AgentaTestCase.NotReady_Conference_Popup@1786f9d5]" name="setDriverPath" is-config="true" duration-ms="7660" started-at="2018-08-08T20:54:16Z" finished-at="2018-08-08T20:54:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setDriverPath -->
-        <test-method status="PASS" signature="to_validate_Conference_for_three_User_in_Not_Ready_with_PopUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.agentaDemo.AgentaTestCase.NotReady_Conference_Popup@1786f9d5]" name="to_validate_Conference_for_three_User_in_Not_Ready_with_PopUp" duration-ms="238821" started-at="2018-08-08T20:54:24Z" data-provider="conference" finished-at="2018-08-08T20:58:23Z">
+        <test-method status="FAIL" signature="to_validate_Conference_for_three_User_in_Not_Ready_with_PopUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.automationsnap.TestCase.NotReady_Conference_Popup@c730b35]" name="to_validate_Conference_for_three_User_in_Not_Ready_with_PopUp" duration-ms="29568" started-at="2018-08-09T19:09:38Z" data-provider="conference" finished-at="2018-08-09T19:10:08Z">
           <params>
             <param index="0">
               <value>
@@ -168,14 +93,209 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Reached error page: about:neterror?e=connectionFailure&u=https%3A//localhost%3A8080/&c=UTF-8&f=regular&d=Firefox%20can%27t%20establish%20a%20connection%20to%20the%20server%20at%20localhost%3A8080.
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'ADITYA-LAPTOP', ip: '192.168.56.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_77'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\aditya.p\AppData\Local\Temp\rust_mozprofile.kzzWe8ozhR3J, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=true, browserVersion=55.0, platformVersion=6.3, moz:processID=5836, browserName=firefox, javascriptEnabled=true, platformName=XP}]
+Session ID: 8d8413e7-10d3-447d-8a96-d87cb041ac0d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Reached error page: about:neterror?e=connectionFailure&u=https%3A//localhost%3A8080/&c=UTF-8&f=regular&d=Firefox%20can%27t%20establish%20a%20connection%20to%20the%20server%20at%20localhost%3A8080.
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'ADITYA-LAPTOP', ip: '192.168.56.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_77'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\aditya.p\AppData\Local\Temp\rust_mozprofile.kzzWe8ozhR3J, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=true, browserVersion=55.0, platformVersion=6.3, moz:processID=5836, browserName=firefox, javascriptEnabled=true, platformName=XP}]
+Session ID: 8d8413e7-10d3-447d-8a96-d87cb041ac0d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:310)
+	at com.automationsnap.baseclass.baseClass.openApp(baseClass.java:62)
+	at com.automationsnap.TestCase.NotReady_Conference_Popup.to_validate_Conference_for_three_User_in_Not_Ready_with_PopUp(NotReady_Conference_Popup.java:71)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:373)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- to_validate_Conference_for_three_User_in_Not_Ready_with_PopUp -->
-        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:com.agentaDemo.AgentaTestCase.NotReady_Conference_Popup@1786f9d5]" name="quitBrowser" is-config="true" duration-ms="7352" started-at="2018-08-08T20:58:23Z" finished-at="2018-08-08T20:58:30Z">
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:com.automationsnap.TestCase.NotReady_Conference_Popup@c730b35]" name="quitBrowser" is-config="true" duration-ms="5666" started-at="2018-08-09T19:10:08Z" finished-at="2018-08-09T19:10:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
-      </class> <!-- com.agentaDemo.AgentaTestCase.NotReady_Conference_Popup -->
+      </class> <!-- com.automationsnap.TestCase.NotReady_Conference_Popup -->
+      <class name="com.automationsnap.TestCase.NotReady_Wrapupreasoncode_PopUp">
+        <test-method status="PASS" signature="setObject()[pri:0, instance:com.automationsnap.TestCase.NotReady_Wrapupreasoncode_PopUp@206a70ef]" name="setObject" is-config="true" duration-ms="253" started-at="2018-08-09T19:10:14Z" finished-at="2018-08-09T19:10:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setObject -->
+        <test-method status="PASS" signature="setDriverPath()[pri:0, instance:com.automationsnap.TestCase.NotReady_Wrapupreasoncode_PopUp@206a70ef]" name="setDriverPath" is-config="true" duration-ms="3905" started-at="2018-08-09T19:10:14Z" finished-at="2018-08-09T19:10:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriverPath -->
+        <test-method status="FAIL" signature="to_validate_Wrapup_ReasonCode_Not_Ready_with_PopUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.automationsnap.TestCase.NotReady_Wrapupreasoncode_PopUp@206a70ef]" name="to_validate_Wrapup_ReasonCode_Not_Ready_with_PopUp" duration-ms="26230" started-at="2018-08-09T19:10:18Z" data-provider="Wrapupreasoncode" finished-at="2018-08-09T19:10:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://localhost:8080/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[749932]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[749932]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[749933]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[749933]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[749933]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[sales]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Meeting]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Meeting]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Reached error page: about:neterror?e=connectionFailure&u=https%3A//localhost%3A8080/&c=UTF-8&f=regular&d=Firefox%20can%27t%20establish%20a%20connection%20to%20the%20server%20at%20localhost%3A8080.
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'ADITYA-LAPTOP', ip: '192.168.56.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_77'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\aditya.p\AppData\Local\Temp\rust_mozprofile.P1pJcRljR8Av, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=true, browserVersion=55.0, platformVersion=6.3, moz:processID=5960, browserName=firefox, javascriptEnabled=true, platformName=XP}]
+Session ID: acfb4e92-c3a5-4828-8536-978d99984eec]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Reached error page: about:neterror?e=connectionFailure&u=https%3A//localhost%3A8080/&c=UTF-8&f=regular&d=Firefox%20can%27t%20establish%20a%20connection%20to%20the%20server%20at%20localhost%3A8080.
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'ADITYA-LAPTOP', ip: '192.168.56.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_77'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\aditya.p\AppData\Local\Temp\rust_mozprofile.P1pJcRljR8Av, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=true, browserVersion=55.0, platformVersion=6.3, moz:processID=5960, browserName=firefox, javascriptEnabled=true, platformName=XP}]
+Session ID: acfb4e92-c3a5-4828-8536-978d99984eec
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:310)
+	at com.automationsnap.baseclass.baseClass.openApp(baseClass.java:62)
+	at com.automationsnap.TestCase.NotReady_Wrapupreasoncode_PopUp.to_validate_Wrapup_ReasonCode_Not_Ready_with_PopUp(NotReady_Wrapupreasoncode_PopUp.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:373)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- to_validate_Wrapup_ReasonCode_Not_Ready_with_PopUp -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:com.automationsnap.TestCase.NotReady_Wrapupreasoncode_PopUp@206a70ef]" name="quitBrowser" is-config="true" duration-ms="5617" started-at="2018-08-09T19:10:45Z" finished-at="2018-08-09T19:10:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- com.automationsnap.TestCase.NotReady_Wrapupreasoncode_PopUp -->
     </test> <!-- UserLogin -->
   </suite> <!-- DemowithPopup -->
 </testng-results>
