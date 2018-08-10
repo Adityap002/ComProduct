@@ -1,6 +1,5 @@
 package com.automationsnap.TestCase;
 
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
@@ -30,8 +29,8 @@ public class NotReady_Conference extends baseClass {
 	private OutboundCallAnsPage outboundCallAccept_FF;
 	private OutboundCallAnsPage outboundCallAccept_Driver;
 	private OutboundCallAnsPage outboundCallAccept_Chrome;
-	private static Logger logger = LogManager.getLogger(NotReady_Conference.class
-			.getName());
+	private static Logger logger = LogManager
+			.getLogger(NotReady_Conference.class.getName());
 
 	@DataProvider(name = "conference")
 	public Object[][] getDataforTest1() {
@@ -49,98 +48,101 @@ public class NotReady_Conference extends baseClass {
 			String signoutreasondriver, String signoutreasonFF,
 			String signoutreasonChrome) throws InterruptedException {
 
-		loginPageChrome = PageFactory.initElements(driver, LoginPage.class);
-		dialPad = PageFactory.initElements(driver, DialPadPage.class);
-		mainPage = PageFactory.initElements(driver, MainPage.class);
-		outboundCallAccept_Driver = PageFactory.initElements(driver,
-				OutboundCallAnsPage.class);
+		try {
+			loginPageChrome = PageFactory.initElements(driver, LoginPage.class);
+			dialPad = PageFactory.initElements(driver, DialPadPage.class);
+			mainPage = PageFactory.initElements(driver, MainPage.class);
+			outboundCallAccept_Driver = PageFactory.initElements(driver,
+					OutboundCallAnsPage.class);
 
-		baseClass.openApp(driver, url);
+			baseClass.openApp(driver, url);
 
-		logger.debug(driver);
-		
+			logger.debug(driver);
 
-		DriverInstantiate.newDriver("ff");
-		baseClass.openApp(DriverInstantiate.ffdriver, url);
-		loginPageFF = PageFactory.initElements(DriverInstantiate.ffdriver,
-				LoginPage.class);
-		mainPageFF = PageFactory.initElements(DriverInstantiate.ffdriver,
-				MainPage.class);
-		outboundCallAccept_FF = PageFactory.initElements(
-				DriverInstantiate.ffdriver, OutboundCallAnsPage.class);
+			DriverInstantiate.newDriver("ff");
+			baseClass.openApp(DriverInstantiate.ffdriver, url);
+			loginPageFF = PageFactory.initElements(DriverInstantiate.ffdriver,
+					LoginPage.class);
+			mainPageFF = PageFactory.initElements(DriverInstantiate.ffdriver,
+					MainPage.class);
+			outboundCallAccept_FF = PageFactory.initElements(
+					DriverInstantiate.ffdriver, OutboundCallAnsPage.class);
 
-		logger.debug(DriverInstantiate.ffdriver);
+			logger.debug(DriverInstantiate.ffdriver);
 
-		DriverInstantiate.newDriver("chrome");
-		baseClass.openApp(DriverInstantiate.chromedriver, url);
-		Thread.sleep(8000);
-		loginPageCh = PageFactory.initElements(DriverInstantiate.chromedriver,
-				LoginPage.class);
-		mainPageChrome = PageFactory.initElements(
-				DriverInstantiate.chromedriver, MainPage.class);
-		outboundCallAccept_Chrome = PageFactory.initElements(
-				DriverInstantiate.chromedriver, OutboundCallAnsPage.class);
+			DriverInstantiate.newDriver("chrome");
+			baseClass.openApp(DriverInstantiate.chromedriver, url);
+			Thread.sleep(8000);
+			loginPageCh = PageFactory.initElements(
+					DriverInstantiate.chromedriver, LoginPage.class);
+			mainPageChrome = PageFactory.initElements(
+					DriverInstantiate.chromedriver, MainPage.class);
+			outboundCallAccept_Chrome = PageFactory.initElements(
+					DriverInstantiate.chromedriver, OutboundCallAnsPage.class);
 
-		logger.debug(DriverInstantiate.chromedriver);
+			logger.debug(DriverInstantiate.chromedriver);
 
-		// Login with user
-		loginPageChrome.loginWithValidCredentials(username_ch1, pwd_ch1,
-				ext_ch1);
-		// utility.isElementVisible_Wait(driver,LoginPage.sighOutLoc);
+			// Login with user
+			loginPageChrome.loginWithValidCredentials(username_ch1, pwd_ch1,
+					ext_ch1);
+			// utility.isElementVisible_Wait(driver,LoginPage.sighOutLoc);
 
-		loginPageFF.loginWithValidCredentials(username_ff, pwd_ff, ext_ff);
+			loginPageFF.loginWithValidCredentials(username_ff, pwd_ff, ext_ff);
 
-		loginPageCh.loginWithValidCredentials(username_ch2, pwd_ch2, ext_ch2);
-		Thread.sleep(30000);
+			loginPageCh.loginWithValidCredentials(username_ch2, pwd_ch2,
+					ext_ch2);
+			Thread.sleep(30000);
 
-		// DialPadPage dialPad = PageFactory.initElements(driver,
-		// //DialPadPage.class);
+			// DialPadPage dialPad = PageFactory.initElements(driver,
+			// //DialPadPage.class);
 
-		mainPage.keyboardClick();
+			mainPage.keyboardClick();
 
-		dialPad.dialNumber(counsultAgent1);
+			dialPad.dialNumber(counsultAgent1);
 
-		dialPad.callBtn_Click();
-		logger.debug("Click on call button test1");
+			dialPad.callBtn_Click();
+			logger.debug("Click on call button test1");
 
-		Thread.sleep(3000);
+			Thread.sleep(3000);
 
-		outboundCallAccept_FF.answer_Click();
-		logger.debug("Clicked on FF answer");
+			outboundCallAccept_FF.answer_Click();
+			logger.debug("Clicked on FF answer");
 
-		Thread.sleep(2000);
+			Thread.sleep(2000);
 
-		outboundCallAccept_Driver.consultBtn_Click();
+			outboundCallAccept_Driver.consultBtn_Click();
 
-		dialPad.dialNumber(counsultAgent2);
+			dialPad.dialNumber(counsultAgent2);
 
-		dialPad.callBtn_Click();
+			dialPad.callBtn_Click();
 
-		Thread.sleep(3000);
+			Thread.sleep(3000);
 
-		// Answer to call in Firefox
-		outboundCallAccept_Chrome.answer_Click();
+			// Answer to call in Firefox
+			outboundCallAccept_Chrome.answer_Click();
 
-		// click on first user tab
-		outboundCallAccept_Driver.firstUserForConference_Click();
+			// click on first user tab
+			outboundCallAccept_Driver.firstUserForConference_Click();
 
-		Thread.sleep(2000);
+			Thread.sleep(2000);
 
-		outboundCallAccept_Driver.conferenceBtn_Click();
+			outboundCallAccept_Driver.conferenceBtn_Click();
 
-		outboundCallAccept_Driver.endCallBtn_Click();
+			outboundCallAccept_Driver.endCallBtn_Click();
 
-		Thread.sleep(2000);
+			Thread.sleep(2000);
 
-		outboundCallAccept_FF.endCallBtn_Click();
+			outboundCallAccept_FF.endCallBtn_Click();
 
-		Thread.sleep(7000);
+			Thread.sleep(7000);
 
-		mainPage.signOutClick(signoutreasondriver);
+			mainPage.signOutClick(signoutreasondriver);
 
-		mainPageFF.signOutClick(signoutreasonFF);
-		
-		mainPageChrome.signOutClick(signoutreasonChrome);
+			mainPageFF.signOutClick(signoutreasonFF);
+
+			mainPageChrome.signOutClick(signoutreasonChrome);
+		} catch (Exception e) {
+			logger.error(e);
+		}
 	}
-
 }

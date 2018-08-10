@@ -14,7 +14,6 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class ListnerClass extends baseClass implements ITestListener {
 
-	
 	public static ExtentReports reports;
 	public static ExtentTest test;
 
@@ -24,8 +23,10 @@ public class ListnerClass extends baseClass implements ITestListener {
 	public void onTestFailure(ITestResult result) {
 
 		String fileName = ".\\ScreenShot\\"
-				+ result.getMethod().getMethodName() + "_" + new SimpleDateFormat(
-						"yyyy-MM-dd hh-mm-ss-ms").format(new Date()) + ".png";
+				+ result.getMethod().getMethodName()
+				+ "_"
+				+ new SimpleDateFormat("yyyy-MM-dd hh-mm-ss-ms")
+						.format(new Date()) + ".png";
 		try {
 			takeSnapShot(driver, fileName);
 			String file = test.addScreenCapture(fileName);
@@ -39,20 +40,33 @@ public class ListnerClass extends baseClass implements ITestListener {
 	}
 
 	public void onTestStart(ITestResult result) {
-		test = reports.startTest(result.getMethod().getMethodName());
-		test.log(LogStatus.INFO, result.getMethod().getMethodName()
-				+ "test is started");
+		try {
+			test = reports.startTest(result.getMethod().getMethodName());
+			test.log(LogStatus.INFO, result.getMethod().getMethodName()
+					+ "test is started");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
 	}
 
 	public void onTestSuccess(ITestResult result) {
-		test.log(LogStatus.PASS, result.getMethod().getMethodName()
-				+ "test is passed");
+		try {
+			test.log(LogStatus.PASS, result.getMethod().getMethodName()
+					+ "test is passed");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 	}
 
 	public void onTestSkipped(ITestResult result) {
-		test.log(LogStatus.SKIP, result.getMethod().getMethodName()
-				+ "test is skipped");
+		try {
+			test.log(LogStatus.SKIP, result.getMethod().getMethodName()
+					+ "test is skipped");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
@@ -60,16 +74,25 @@ public class ListnerClass extends baseClass implements ITestListener {
 	}
 
 	public void onStart(ITestContext context) {
-		reports = new ExtentReports(".\\Report\\AgentsSnap" +  new SimpleDateFormat(
-				"yyyy-MM-dd hh-mm-ss-ms").format(new Date()) + "_reports.html",
-				false);
-		reports.addSystemInfo("Selenium Version", "3.6.0").addSystemInfo(
-				"Platform", "Windows-8");
+		try {
+			reports = new ExtentReports(
+					".\\Report\\AgentsSnap"
+							+ new SimpleDateFormat("yyyy-MM-dd hh-mm-ss-ms").format(new Date())
+							+ "_reports.html", false);
+			reports.addSystemInfo("Selenium Version", "3.6.0").addSystemInfo(
+					"Platform", "Windows-8");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
 	}
 
 	public void onFinish(ITestContext context) {
-		reports.endTest(test);
-		reports.flush();
+		try {
+			reports.endTest(test);
+			reports.flush();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

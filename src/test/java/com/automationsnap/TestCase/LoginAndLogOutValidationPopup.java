@@ -34,42 +34,48 @@ public class LoginAndLogOutValidationPopup extends baseClass {
 
 	@Test(dataProvider = "LoginLogout", description = "validate SignOut feature with valid and invalid reason codes")
 	public void to_Validate_Logout_with_Reason_Code_with_PopUp(String url,
-			String username_ch1, String pwd_ch1, String ext_ch1, String wrapupReason)
-			throws InterruptedException {
-		loginPageChrome = PageFactory.initElements(driver, LoginPage.class);
-		mainPage = PageFactory.initElements(driver, MainPage.class);
-		baseClass.openApp(driver, url);
-		Thread.sleep(10000);
-		logger.debug(driver);
+			String username_ch1, String pwd_ch1, String ext_ch1,
+			String wrapupReason) throws InterruptedException {
 
-		// Generating Alert Using Javascript Executor
-		javascript = (JavascriptExecutor) driver;
-		javascript.executeScript("alert('Chrome Browser instantiated');");
-		Thread.sleep(2000);
-		driver.switchTo().alert().accept();
+		try {
+			loginPageChrome = PageFactory.initElements(driver, LoginPage.class);
+			mainPage = PageFactory.initElements(driver, MainPage.class);
+			baseClass.openApp(driver, url);
+			Thread.sleep(10000);
+			logger.debug(driver);
 
-		// Login with user
-		loginPageChrome.loginWithValidCredentials(username_ch1, pwd_ch1,
-				ext_ch1);
-		javascript.executeScript("alert('User login');");
-		Thread.sleep(2000);
-		driver.switchTo().alert().accept();
-		Thread.sleep(28000);
-		
-		if(ext_ch1.equalsIgnoreCase(mainPage.getAgentExtension())){
-			ListnerClass.test.log(LogStatus.PASS,"Agent is able to login");
-		}else{
-			ListnerClass.test.log(LogStatus.FAIL,"Agent is unable to login");
+			// Generating Alert Using Javascript Executor
+			javascript = (JavascriptExecutor) driver;
+			javascript.executeScript("alert('Chrome Browser instantiated');");
+			Thread.sleep(2000);
+			driver.switchTo().alert().accept();
+
+			// Login with user
+			loginPageChrome.loginWithValidCredentials(username_ch1, pwd_ch1,
+					ext_ch1);
+			javascript.executeScript("alert('User login');");
+			Thread.sleep(2000);
+			driver.switchTo().alert().accept();
+			Thread.sleep(28000);
+
+			if (ext_ch1.equalsIgnoreCase(mainPage.getAgentExtension())) {
+				ListnerClass.test.log(LogStatus.PASS, "Agent is able to login");
+			} else {
+				ListnerClass.test.log(LogStatus.FAIL,
+						"Agent is unable to login");
+			}
+			System.out.println(mainPage.getAgentExtension());
+			Assert.assertEquals(mainPage.getAgentExtension(), ext_ch1);
+
+			javascript
+					.executeScript("alert('Click on Sign out button and providing reason for Sign Out..');");
+			Thread.sleep(4000);
+			driver.switchTo().alert().accept();
+			mainPage.signOutClick(wrapupReason);
+			Thread.sleep(2000);
+
+		} catch (Exception e) {
+			logger.error(e);
 		}
-		System.out.println(mainPage.getAgentExtension());
-		Assert.assertEquals(mainPage.getAgentExtension(), ext_ch1);
-
-		javascript.executeScript("alert('Click on Sign out button and providing reason for Sign Out..');");
-		Thread.sleep(4000);
-		driver.switchTo().alert().accept();
-		mainPage.signOutClick(wrapupReason);
-		Thread.sleep(2000);
-		
-		Assert.assertEquals(true, false);
 	}
 }

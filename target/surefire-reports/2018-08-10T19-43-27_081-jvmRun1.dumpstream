@@ -1,0 +1,86 @@
+# Created on 2018-08-10T19:44:43.052
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+# Created on 2018-08-10T19:44:43.458
+Unexpected IOException with stream: Aug 10, 2018 7:44:43 PM org.openqa.selenium.os.UnixProcess destroy
+SEVERE: Unable to kill process with PID 1888
+
+
+# Created on 2018-08-10T19:44:43.471
+Unexpected IOException with stream: [DEBUG] 2018-08-10 19:44:43.468 [main] baseClass - firefox driver quit
+
+
+# Created on 2018-08-10T19:44:44.999
+Unexpected IOException with stream: [DEBUG] 2018-08-10 19:44:44.996 [main] baseClass - Chrome2 driver quit
+
+
+# Created on 2018-08-10T19:44:45.263
+Unexpected IOException with stream: [DEBUG] 2018-08-10 19:44:45.257 [main] ExcelUtility - Workbook : .\src\main\resources\ExcelData.xlsxSheet nameAgentaTest
+
+
+# Created on 2018-08-10T19:44:45.269
+Unexpected IOException with stream: [DEBUG] 2018-08-10 19:44:45.268 [main] baseClass - Excel File name is .\src\main\resources\ExcelData.xlsx
+
+
+# Created on 2018-08-10T19:44:45.283
+Unexpected IOException with stream: [DEBUG] 2018-08-10 19:44:45.281 [main] ExcelUtility - text begin
+
+
+# Created on 2018-08-10T19:44:45.293
+Unexpected IOException with stream: [DEBUG] 2018-08-10 19:44:45.292 [main] ExcelUtility - text end
+
+
+# Created on 2018-08-10T19:44:45.299
+Unexpected IOException with stream: [DEBUG] 2018-08-10 19:44:45.298 [main] ExcelUtility - Test Name is Wrapupreasoncode
+
+
+# Created on 2018-08-10T19:44:45.305
+Unexpected IOException with stream: [DEBUG] 2018-08-10 19:44:45.303 [main] ExcelUtility - Start row 7End Row 7Start Col 1End col 11
+
+
+# Created on 2018-08-10T19:44:45.314
+Unexpected IOException with stream: [DEBUG] 2018-08-10 19:44:45.313 [main] NotReady_Wrapupreasoncode_PopUp - data provider called for Wrapupreasoncode
+
+
+# Created on 2018-08-10T19:44:45.524
+Unexpected IOException with stream: S
+
+# Created on 2018-08-10T19:44:45.528
+Unexpected IOException with stream: t
+
+# Created on 2018-08-10T19:44:45.533
+Unexpected IOException with stream: a
+
+# Created on 2018-08-10T19:44:45.537
+Unexpected IOException with stream: r
+
+# Created on 2018-08-10T19:44:45.541
+Unexpected IOException with stream: t
+
+# Created on 2018-08-10T19:44:45.547
+Unexpected IOException with stream: i
+
+# Created on 2018-08-10T19:44:45.552
+Unexpected IOException with stream: n
+
+# Created on 2018-08-10T19:44:45.557
+Unexpected IOException with stream: g
+
+# Created on 2018-08-10T19:44:45.562
+Unexpected IOException with stream:  
+
+# Created on 2018-08-10T19:44:45.566
+Unexpected IOException with stream: C
+
+# Created on 2018-08-10T19:44:45.575
+Unexpected IOException with stream: h
+
+# Created on 2018-08-10T19:44:45.580
+Unexpected IOException with stream: r
+

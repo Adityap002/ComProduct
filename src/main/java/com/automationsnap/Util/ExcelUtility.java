@@ -1,6 +1,7 @@
 package com.automationsnap.Util;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -33,8 +34,10 @@ public class ExcelUtility {
 			ExcelWBook = new XSSFWorkbook(ExcelFile);
 			ExcelWSheet = ExcelWBook.getSheet(sheetName);
 			logger.debug("Workbook : " + path + "Sheet name" + sheetName);
-		} catch (Exception e) {
-			throw (e);
+		} catch (FileNotFoundException e) {
+			logger.error(e);
+		}catch (Exception e) {
+			logger.error(e);
 		}
 	}
 
@@ -70,7 +73,7 @@ public class ExcelUtility {
 				}
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			logger.error(e);
 		}
 		return testData;
 	}
