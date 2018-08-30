@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [DemowithoutPopup]">
+  <test thread-count="5" name="UserLogin">
+    <classes>
+      <class name="com.automationsnap.TestCase.NotReady_Wrapupreasoncode"/>
+    </classes>
+  </test> <!-- UserLogin -->
+  <test name="UserLogin(failed)">
+    <classes>
+      <class name="com.automationsnap.TestCase.NotReady_Wrapupreasoncode">
+        <methods>
+          <include name="setObject"/>
+          <include name="setDriverPath"/>
+          <include name="quitBrowser"/>
+          <include name="to_validate_Wrapup_ReasonCode_Not_Ready" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.automationsnap.TestCase.NotReady_Wrapupreasoncode -->
+    </classes>
+  </test> <!-- UserLogin(failed) -->
+</suite> <!-- Failed suite [DemowithoutPopup] -->

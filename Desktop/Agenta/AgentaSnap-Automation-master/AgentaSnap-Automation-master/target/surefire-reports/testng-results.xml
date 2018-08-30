@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="DemowithoutPopup" duration-ms="290315" started-at="2018-08-29T15:49:48Z" finished-at="2018-08-29T15:54:38Z">
+    <groups>
+    </groups>
+    <test name="UserLogin" duration-ms="290315" started-at="2018-08-29T15:49:48Z" finished-at="2018-08-29T15:54:38Z">
+      <class name="com.automationsnap.TestCase.LoginAndLogOutValidation">
+        <test-method status="PASS" signature="setObject()[pri:0, instance:com.automationsnap.TestCase.LoginAndLogOutValidation@40a4337a]" name="setObject" is-config="true" duration-ms="1313" started-at="2018-08-29T21:19:48Z" finished-at="2018-08-29T21:19:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setObject -->
+        <test-method status="PASS" signature="setDriverPath()[pri:0, instance:com.automationsnap.TestCase.LoginAndLogOutValidation@40a4337a]" name="setDriverPath" is-config="true" duration-ms="9186" started-at="2018-08-29T21:19:49Z" finished-at="2018-08-29T21:19:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriverPath -->
+        <test-method status="PASS" signature="to_Validate_Logout_with_Reason_Code(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.automationsnap.TestCase.LoginAndLogOutValidation@40a4337a]" name="to_Validate_Logout_with_Reason_Code" duration-ms="39659" started-at="2018-08-29T21:19:59Z" description="validate SignOut feature with valid and invalid reason codes" data-provider="LoginLogout" finished-at="2018-08-29T21:20:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://localhost:9090/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[749934]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[749934]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Meeting]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- to_Validate_Logout_with_Reason_Code -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:com.automationsnap.TestCase.LoginAndLogOutValidation@40a4337a]" name="quitBrowser" is-config="true" duration-ms="1140" started-at="2018-08-29T21:20:38Z" finished-at="2018-08-29T21:20:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+        <test-method status="PASS" signature="setDriverPath()[pri:0, instance:com.automationsnap.TestCase.LoginAndLogOutValidation@40a4337a]" name="setDriverPath" is-config="true" duration-ms="5602" started-at="2018-08-29T21:20:39Z" finished-at="2018-08-29T21:20:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriverPath -->
+        <test-method status="PASS" signature="to_Validate_Logout_without_Reason_Code(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.automationsnap.TestCase.LoginAndLogOutValidation@40a4337a]" name="to_Validate_Logout_without_Reason_Code" duration-ms="38925" started-at="2018-08-29T21:20:45Z" description="validate SignOut feature without Reason Code" data-provider="WithoutReasonCode" finished-at="2018-08-29T21:21:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://localhost:9090/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[749939]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[749939]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- to_Validate_Logout_without_Reason_Code -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:com.automationsnap.TestCase.LoginAndLogOutValidation@40a4337a]" name="quitBrowser" is-config="true" duration-ms="1166" started-at="2018-08-29T21:21:24Z" finished-at="2018-08-29T21:21:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+        <test-method status="PASS" signature="setDriverPath()[pri:0, instance:com.automationsnap.TestCase.LoginAndLogOutValidation@40a4337a]" name="setDriverPath" is-config="true" duration-ms="6566" started-at="2018-08-29T21:21:25Z" finished-at="2018-08-29T21:21:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriverPath -->
+        <test-method status="PASS" signature="to_Validate_SignOut_And_NotReady_Scroll_Select_ReasonCode(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.automationsnap.TestCase.LoginAndLogOutValidation@40a4337a]" name="to_Validate_SignOut_And_NotReady_Scroll_Select_ReasonCode" duration-ms="48403" started-at="2018-08-29T21:21:32Z" data-provider="LoginLogoutScrollRC" finished-at="2018-08-29T21:22:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://localhost:9090/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[749934]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[749934]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[VQ-Not Ready]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Signout4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- to_Validate_SignOut_And_NotReady_Scroll_Select_ReasonCode -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:com.automationsnap.TestCase.LoginAndLogOutValidation@40a4337a]" name="quitBrowser" is-config="true" duration-ms="1063" started-at="2018-08-29T21:22:20Z" finished-at="2018-08-29T21:22:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- com.automationsnap.TestCase.LoginAndLogOutValidation -->
+      <class name="com.automationsnap.TestCase.NotReadyReasonCodeValidation">
+        <test-method status="PASS" signature="setObject()[pri:0, instance:com.automationsnap.TestCase.NotReadyReasonCodeValidation@6025e1b6]" name="setObject" is-config="true" duration-ms="463" started-at="2018-08-29T21:22:21Z" finished-at="2018-08-29T21:22:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setObject -->
+        <test-method status="PASS" signature="setDriverPath()[pri:0, instance:com.automationsnap.TestCase.NotReadyReasonCodeValidation@6025e1b6]" name="setDriverPath" is-config="true" duration-ms="5670" started-at="2018-08-29T21:22:22Z" finished-at="2018-08-29T21:22:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriverPath -->
+        <test-method status="PASS" signature="to_Validate_NotReady_RC_AfterRefresh(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.automationsnap.TestCase.NotReadyReasonCodeValidation@6025e1b6]" name="to_Validate_NotReady_RC_AfterRefresh" duration-ms="71956" started-at="2018-08-29T21:22:27Z" description="validate sign in and apply reason code and reload" data-provider="NotReadyRefresh" finished-at="2018-08-29T21:23:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://localhost:9090/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[749934]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[749934]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Dinner]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Meeting]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- to_Validate_NotReady_RC_AfterRefresh -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:com.automationsnap.TestCase.NotReadyReasonCodeValidation@6025e1b6]" name="quitBrowser" is-config="true" duration-ms="838" started-at="2018-08-29T21:23:39Z" finished-at="2018-08-29T21:23:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+        <test-method status="PASS" signature="setDriverPath()[pri:0, instance:com.automationsnap.TestCase.NotReadyReasonCodeValidation@6025e1b6]" name="setDriverPath" is-config="true" duration-ms="7109" started-at="2018-08-29T21:23:40Z" finished-at="2018-08-29T21:23:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriverPath -->
+        <test-method status="PASS" signature="to_Validate_Selected_NotReady_RC_State(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.automationsnap.TestCase.NotReadyReasonCodeValidation@6025e1b6]" name="to_Validate_Selected_NotReady_RC_State" duration-ms="49654" started-at="2018-08-29T21:23:47Z" description="validate SignOut feature with valid and invalid reason codes" data-provider="NotReadyResaonCodeSelect" finished-at="2018-08-29T21:24:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://localhost:9090/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[749934]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[749934]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Dinner]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Meeting]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- to_Validate_Selected_NotReady_RC_State -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:com.automationsnap.TestCase.NotReadyReasonCodeValidation@6025e1b6]" name="quitBrowser" is-config="true" duration-ms="1166" started-at="2018-08-29T21:24:37Z" finished-at="2018-08-29T21:24:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- com.automationsnap.TestCase.NotReadyReasonCodeValidation -->
+    </test> <!-- UserLogin -->
+  </suite> <!-- DemowithoutPopup -->
+</testng-results>
